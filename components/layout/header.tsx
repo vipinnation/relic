@@ -1,7 +1,7 @@
-import { Bell, Search, User } from "lucide-react";
 import Link from "next/link";
 import { ModeToggle } from "../mode-toggle";
 import { UserButton } from "../user-button";
+import CONSTANTS from "@/constants/contants";
 
 export default function Header() {
   return (
@@ -11,7 +11,9 @@ export default function Header() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <Link href="/" className="flex-shrink-0">
-                <span className="text-2xl font-bold text-gray-800">Logo</span>
+                <span className="text-2xl font-bold text-gray-800">
+                  {CONSTANTS.APP_DETAILS.name}
+                </span>
               </Link>
               <nav className="hidden md:block ml-10">
                 <ul className="flex space-x-4">
@@ -51,7 +53,7 @@ export default function Header() {
               </nav>
             </div>
             <div className="flex items-center">
-              <div className="ml-auto flex items-center space-x-4">
+              <div className="ml-auto flex items-center ">
                 <ModeToggle />
                 <UserButton />
               </div>
